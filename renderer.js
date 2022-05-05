@@ -1,14 +1,10 @@
 const noise = () => {
 	const canvas = document.querySelector('canvas'),
 		ctx = canvas.getContext('2d');
-	canvas.width = window.innerWidth;
-	canvas.height = window.outerHeight;
 
 	const resize = () => {
-		canvas.width = window.innerWidth * window.devicePixelRatio;
-		canvas.height = window.innerHeight * window.devicePixelRatio;
-		canvas.style.width = window.innerWidth + 'px';
-		canvas.style.height = window.innerHeight + 'px';
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight; 
 	};
 	resize();
 	window.onresize = resize;
